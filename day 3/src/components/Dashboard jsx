@@ -1,0 +1,42 @@
+// VolunteerDashboard.jsx
+
+import React from 'react';
+
+const VolunteerDashboard = () => {
+  // Sample volunteer data (replace with your data source)
+  const volunteers = [
+    { id: 1, name: 'John Doe', role: 'Event Coordinator' },
+    { id: 2, name: 'Jane Smith', role: 'Fundraiser' },
+    { id: 3, name: 'Alice Johnson', role: 'Mentor' },
+    // Add more volunteer data as needed
+  ];
+
+  return (
+    <div className="volunteer-dashboard">
+      <h1>Volunteer Dashboard</h1>
+      <div className="volunteer-list">
+        <h2>Volunteer List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            {volunteers.map((volunteer) => (
+              <tr key={volunteer.id}>
+                <td>{volunteer.id}</td>
+                <td>{volunteer.name}</td>
+                <td>{volunteer.role}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default VolunteerDashboard;
